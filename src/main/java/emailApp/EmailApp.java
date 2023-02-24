@@ -16,6 +16,19 @@ public class EmailApp {
 			obj.getAlternateEmail();
 		}
 		else if(c=='N') {System.out.println("Ok");}
+		
+		System.out.println("Your mailbox capacity is: "+ obj.getMailBoxCapacity());
+		System.out.println("Do you want to increase the mail box capacity\nPress Y or N");
+		char c2=scanner.next().charAt(0);
+		if (c2=='Y') {
+			System.out.println("Enter the new mailbox capacity you want: ");
+			int capacity=scanner.nextInt();
+			obj.setMailboxCapacity(capacity);
+			System.out.println("Your mailbox capacity is: "+ obj.getMailBoxCapacity());
+		}
+		else if (c2=='N') {
+			System.out.println("Ok");
+		}
 		scanner.close();
 	}
 }
